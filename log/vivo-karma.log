@@ -1,0 +1,95 @@
+10/Oct/2015 15:00:40,785- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:00:40,788- KarmaUserMetadata: Set parameter: USER_PREFERENCES_DIRECTORY -> /home/ted/karma/user-preferences/
+10/Oct/2015 15:00:40,789- KarmaUserMetadata: Set parameter: USER_CONFIG_DIRECTORY -> /home/ted/karma/config/
+10/Oct/2015 15:00:40,789- KarmaUserMetadata: Set parameter: USER_PYTHON_SCRIPTS_DIRECTORY -> /home/ted/karma/python/
+10/Oct/2015 15:00:45,459- ModelingConfiguration: Load modeling.properties: /home/ted/karma/config/modeling.properties:true
+10/Oct/2015 15:00:46,014- VIVOSync: Processing: people with debug set to false
+10/Oct/2015 15:00:46,026- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:00:46,619- Reflections: Reflections took 486 ms to scan 1 urls, producing 102 keys and 768 values 
+10/Oct/2015 15:00:46,673- ExecutionController: Loaded 98 possible commands
+10/Oct/2015 15:00:46,928- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:00:46,928- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:00:46,928- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:00:46,928- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:00:47,134- VIVOSync: Reading Karma generated RDF into Jena model.
+10/Oct/2015 15:00:47,541- VIVOSPARQLClient: Add and subtract graphs are empty. No changes made to http://localhost/converis/people.
+10/Oct/2015 15:00:47,541- VIVOSync: Triples synced for: people
+10/Oct/2015 15:01:16,377- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:01:16,380- KarmaUserMetadata: Set parameter: USER_PREFERENCES_DIRECTORY -> /home/ted/karma/user-preferences/
+10/Oct/2015 15:01:16,381- KarmaUserMetadata: Set parameter: USER_CONFIG_DIRECTORY -> /home/ted/karma/config/
+10/Oct/2015 15:01:16,382- KarmaUserMetadata: Set parameter: USER_PYTHON_SCRIPTS_DIRECTORY -> /home/ted/karma/python/
+10/Oct/2015 15:01:21,075- ModelingConfiguration: Load modeling.properties: /home/ted/karma/config/modeling.properties:true
+10/Oct/2015 15:01:21,731- VIVOSync: Processing: people with debug set to false
+10/Oct/2015 15:01:21,744- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:01:22,347- Reflections: Reflections took 495 ms to scan 1 urls, producing 102 keys and 768 values 
+10/Oct/2015 15:01:22,439- ExecutionController: Loaded 98 possible commands
+10/Oct/2015 15:01:22,689- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:01:22,690- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:01:22,690- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:01:22,690- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:01:22,885- VIVOSync: Reading Karma generated RDF into Jena model.
+10/Oct/2015 15:01:23,287- VIVOSPARQLClient: Add and subtract graphs are empty. No changes made to http://localhost/converis/people.
+10/Oct/2015 15:01:23,287- VIVOSync: Triples synced for: people
+10/Oct/2015 15:03:00,283- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:03:04,668- ModelingConfiguration: Load modeling.properties: /home/ted/karma/config/modeling.properties:true
+10/Oct/2015 15:03:05,293- VIVOSync: Processing: people with debug set to false
+10/Oct/2015 15:03:05,306- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:03:05,913- Reflections: Reflections took 499 ms to scan 1 urls, producing 102 keys and 768 values 
+10/Oct/2015 15:03:05,981- ExecutionController: Loaded 98 possible commands
+10/Oct/2015 15:03:06,220- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:03:06,220- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:03:06,220- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:03:06,220- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:03:06,415- VIVOSync: Reading Karma generated RDF into Jena model.
+10/Oct/2015 15:03:06,827- VIVOSPARQLClient: Add and subtract graphs are empty. No changes made to http://localhost/converis/people.
+10/Oct/2015 15:03:06,827- VIVOSync: Triples synced for: people
+10/Oct/2015 15:04:07,724- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:04:07,727- KarmaUserMetadata: Set parameter: USER_PREFERENCES_DIRECTORY -> /home/ted/karma/user-preferences/
+10/Oct/2015 15:04:07,728- KarmaUserMetadata: Set parameter: USER_CONFIG_DIRECTORY -> /home/ted/karma/config/
+10/Oct/2015 15:04:07,728- KarmaUserMetadata: Set parameter: USER_PYTHON_SCRIPTS_DIRECTORY -> /home/ted/karma/python/
+10/Oct/2015 15:04:12,278- ModelingConfiguration: Load modeling.properties: /home/ted/karma/config/modeling.properties:true
+10/Oct/2015 15:04:12,762- VIVOSync: Processing: people with debug set to false
+10/Oct/2015 15:04:12,773- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:04:13,388- Reflections: Reflections took 473 ms to scan 1 urls, producing 102 keys and 768 values 
+10/Oct/2015 15:04:13,444- ExecutionController: Loaded 98 possible commands
+10/Oct/2015 15:04:13,688- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:04:13,689- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:04:13,689- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:04:13,689- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:04:13,902- VIVOSync: Reading Karma generated RDF into Jena model.
+10/Oct/2015 15:04:14,297- VIVOSPARQLClient: Add and subtract graphs are empty. No changes made to http://localhost/converis/people.
+10/Oct/2015 15:04:14,297- VIVOSync: Triples synced for: people
+10/Oct/2015 15:04:20,756- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:04:20,759- KarmaUserMetadata: Set parameter: USER_PREFERENCES_DIRECTORY -> /home/ted/karma/user-preferences/
+10/Oct/2015 15:04:20,760- KarmaUserMetadata: Set parameter: USER_CONFIG_DIRECTORY -> /home/ted/karma/config/
+10/Oct/2015 15:04:20,760- KarmaUserMetadata: Set parameter: USER_PYTHON_SCRIPTS_DIRECTORY -> /home/ted/karma/python/
+10/Oct/2015 15:04:25,413- ModelingConfiguration: Load modeling.properties: /home/ted/karma/config/modeling.properties:true
+10/Oct/2015 15:04:25,413- ModelingConfiguration: Done Loading modeling.properties
+10/Oct/2015 15:04:25,980- VIVOSync: Processing: people with debug set to false
+10/Oct/2015 15:04:25,992- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:04:27,906- Reflections: Reflections took 1748 ms to scan 1 urls, producing 102 keys and 768 values 
+10/Oct/2015 15:04:28,008- ExecutionController: Loaded 98 possible commands
+10/Oct/2015 15:04:28,201- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:04:28,201- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:04:28,201- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:04:28,202- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:04:28,424- VIVOSync: Reading Karma generated RDF into Jena model.
+10/Oct/2015 15:04:28,857- VIVOSPARQLClient: Add and subtract graphs are empty. No changes made to http://localhost/converis/people.
+10/Oct/2015 15:04:28,857- VIVOSync: Triples synced for: people
+10/Oct/2015 15:05:06,436- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:05:06,439- KarmaUserMetadata: Set parameter: USER_PREFERENCES_DIRECTORY -> /home/ted/karma/user-preferences/
+10/Oct/2015 15:05:06,440- KarmaUserMetadata: Set parameter: USER_CONFIG_DIRECTORY -> /home/ted/karma/config/
+10/Oct/2015 15:05:06,440- KarmaUserMetadata: Set parameter: USER_PYTHON_SCRIPTS_DIRECTORY -> /home/ted/karma/python/
+10/Oct/2015 15:05:11,089- ModelingConfiguration: Load modeling.properties: /home/ted/karma/config/modeling.properties:true
+10/Oct/2015 15:05:11,089- ModelingConfiguration: Done Loading modeling.properties
+10/Oct/2015 15:05:11,567- VIVOSync: Processing: people with debug set to false
+10/Oct/2015 15:05:11,577- ServletContextParameterMap: Karma home: /home/ted/karma/
+10/Oct/2015 15:05:12,202- Reflections: Reflections took 524 ms to scan 1 urls, producing 102 keys and 768 values 
+10/Oct/2015 15:05:12,256- ExecutionController: Loaded 98 possible commands
+10/Oct/2015 15:05:12,482- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:05:12,482- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:05:12,483- UIConfiguration: UICOnfiguration:/home/ted/karma/config/
+10/Oct/2015 15:05:12,483- UIConfiguration: Load File:/home/ted/karma/config//ui.properties
+10/Oct/2015 15:05:12,663- VIVOSync: Reading Karma generated RDF into Jena model.
+10/Oct/2015 15:05:13,067- VIVOSPARQLClient: Add and subtract graphs are empty. No changes made to http://localhost/converis/people.
+10/Oct/2015 15:05:13,067- VIVOSync: Triples synced for: people
