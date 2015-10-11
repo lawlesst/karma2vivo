@@ -3,3 +3,4 @@ target/
 batch.sh
 *.iml
 log/*.log
+log/*log*

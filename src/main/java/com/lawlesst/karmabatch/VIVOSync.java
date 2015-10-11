@@ -108,8 +108,8 @@ public class VIVOSync {
     }
 
     protected void parseCommandLineOptions(CommandLine cl) {
-        config = (String) cl.getOptionValue("config");
-        config = (String) cl.getOptionValue("baseuri");
+        config = cl.getOptionValue("config");
+        config = cl.getOptionValue("baseuri");
         BASE_DIRECTORY = FilenameUtils.getFullPathNoEndSeparator(config) + File.separator;
     }
 

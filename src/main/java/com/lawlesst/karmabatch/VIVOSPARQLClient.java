@@ -118,7 +118,7 @@ public class VIVOSPARQLClient {
     public void doUpdate(String query) throws IOException {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
-            log.info("Connecting to SPARQL update API at: " + updateApi);
+            log.debug("Connecting to SPARQL update API at: " + updateApi);
             HttpPost httpPost = new HttpPost(updateApi);
             List <NameValuePair> nvps = new ArrayList <NameValuePair>();
             nvps.add(new BasicNameValuePair("update", query));
@@ -148,7 +148,7 @@ public class VIVOSPARQLClient {
 
     /**
      * Method called to Chunk the triples into N-Sized batches and post to VIVO.
-     * This is designed to work around / handle errors whne posting sets of triples
+     * This is designed to work around / handle errors when posting sets of triples
      * over 10,000 to the API.
      *
      * @param namedGraph String with named graph.
@@ -171,6 +171,7 @@ public class VIVOSPARQLClient {
             size++;
             if (size >= bSize) {
                 // Submit
+                log.info("Submitting " + size + " triples to " + namedGraph);
                 submitBatch(tmpModel, namedGraph, changeType);
                 // Reset the tmp model.
                 tmpModel.removeAll();
