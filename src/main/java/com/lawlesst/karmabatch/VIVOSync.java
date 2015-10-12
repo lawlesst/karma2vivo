@@ -39,7 +39,7 @@ public class VIVOSync {
         if(cl == null)
         {
             log.error("No command line options found.");
-            return;
+            System.exit(1);
         }
 
         // Initialize Karma
@@ -117,7 +117,7 @@ public class VIVOSync {
     private static Options createCommandLineOptions() {
         Options options = new Options();
         options.addOption(new Option("config", "config", true, "TTL config file with the Karma models and input files"));
-        options.addOption(new Option("config", "baseuri", true, "BASE URI for new statements"));
+        options.addOption(new Option("baseuri", "baseuri", true, "BASE URI for new statements"));
         return options;
     }
 }
