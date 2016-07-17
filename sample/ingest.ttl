@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ingest: <http://localhost/ingest#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a ingest:Transform ;
+    ingest:name "people" ;
+    ingest:source "rm-people.csv" ;
+    ingest:model "people-model.ttl" ;
+    ingest:debug "true" ;
+    ingest:namedGraph "http://localhost/karma/people" .

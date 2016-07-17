@@ -1,4 +1,4 @@
-package com.lawlesst.karmabatch;
+package com.github.lawlesst.karma2vivo;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;

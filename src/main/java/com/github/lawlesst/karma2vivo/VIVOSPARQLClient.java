@@ -1,7 +1,8 @@
-package com.lawlesst.karmabatch;
+package com.github.lawlesst.karma2vivo;
 
 /**
- * Created by ted on 10/10/15.
+ * Connect to the VIVO SPARQL Update API
+ * Portions of this code are borrowed from the VIVO Harvester project: https://github.com/vivo-project/VIVO-Harvester/tree/develop
  */
 import java.io.IOException;
 import java.io.InputStream;

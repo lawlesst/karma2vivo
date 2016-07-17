@@ -1,4 +1,4 @@
-package com.lawlesst.karmabatch;
+package com.github.lawlesst.karma2vivo;
 
 import edu.isi.karma.config.ModelingConfiguration;
 import edu.isi.karma.config.ModelingConfigurationRegistry;

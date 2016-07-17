@@ -1,7 +1,7 @@
 /**
- * Created by ted on 10/10/15.
+ * Command line tool for syncing CSV files to VIVO using Karma.
  */
-package com.lawlesst.karmabatch;
+package com.github.lawlesst.karma2vivo;
 
 import com.hp.hpl.jena.query.*;
 import com.hp.hpl.jena.rdf.model.Literal;
@@ -24,7 +24,7 @@ public class VIVOSync {
     private static Logger log = LoggerFactory.getLogger(VIVOSync.class);
     private String config;
     private String BASE_DIRECTORY;
-    private String baseuri;
+    private String baseuri = System.getenv("DATA_NAMESPACE");
 
 
     public VIVOSync(CommandLine cl)
@@ -109,7 +109,6 @@ public class VIVOSync {
 
     protected void parseCommandLineOptions(CommandLine cl) {
         config = cl.getOptionValue("config");
-        config = cl.getOptionValue("baseuri");
         BASE_DIRECTORY = FilenameUtils.getFullPathNoEndSeparator(config) + File.separator;
     }
 
@@ -117,7 +116,6 @@ public class VIVOSync {
     private static Options createCommandLineOptions() {
         Options options = new Options();
         options.addOption(new Option("config", "config", true, "TTL config file with the Karma models and input files"));
-        options.addOption(new Option("baseuri", "baseuri", true, "BASE URI for new statements"));
         return options;
     }
 }
