@@ -12,5 +12,5 @@ export KARMA_USER_HOME="/home/user/karma"
 # Increase memory if desired.
 #export MAVEN_OPTS="-Xmx4096m -XX:MaxPermSize=128m"
 
-mvn exec:java -X -Dexec.mainClass="com.github.lawlesst.karma2vivo.VIVOSync" -Dexec.args="-config $1"
+mvn exec:java -X -Dexec.mainClass="com.github.lawlesst.karma2vivo.Batch" -Dexec.args="-config $1"
 
