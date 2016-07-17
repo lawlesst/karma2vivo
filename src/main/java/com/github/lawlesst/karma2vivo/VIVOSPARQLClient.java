@@ -112,6 +112,29 @@ public class VIVOSPARQLClient {
     }
 
     /**
+     * Post the additions to the store via the named graph.
+     *
+     *   http://www.w3.org/TR/sparql11-update/#deleteInsert
+     *   https://wiki.duraspace.org/display/VIVO/The+SPARQL+Update+API
+     *
+     * @param namedGraph String with named graph.
+     * @param additions Jena model with triples to add;
+     * @throws IOException
+     */
+    public void updateNamedGraph(String namedGraph, Model additions) throws IOException {
+
+        if (additions.isEmpty()) {
+            log.info("Add and subtract graphs are empty. No changes made to <g>.".replace("<g>", namedGraph));
+            return;
+        }
+
+        if (!additions.isEmpty()) {
+            log.info("ADDing triples: " + additions.size());
+            bulkUpdate(namedGraph, additions, "add");
+        }
+    }
+
+    /**
      * Actually POST the SPARQL update to the VIVO API.
      * @param query String with SPARQL update query and triples in ntriples format.
      * @throws IOException

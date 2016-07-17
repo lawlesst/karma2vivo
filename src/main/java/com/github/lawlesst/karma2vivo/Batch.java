@@ -20,22 +20,24 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class VIVOSync {
-    private static Logger log = LoggerFactory.getLogger(VIVOSync.class);
+public class Batch {
+    private static Logger log = LoggerFactory.getLogger(Batch.class);
     private String config;
+    private Boolean sync = false;
     private String BASE_DIRECTORY;
     private String baseuri = System.getenv("DATA_NAMESPACE");
 
 
-    public VIVOSync(CommandLine cl)
+    public Batch(CommandLine cl)
     {
         parseCommandLineOptions(cl);
     }
 
     public static void main(String[] args) throws KarmaException, IOException {
 
+        log.info("Starting Karma2VIVO");
         Options options = createCommandLineOptions();
-        CommandLine cl = CommandLineArgumentParser.parse(args, options, VIVOSync.class.getSimpleName());
+        CommandLine cl = CommandLineArgumentParser.parse(args, options, Batch.class.getSimpleName());
         if(cl == null)
         {
             log.error("No command line options found.");
@@ -46,7 +48,7 @@ public class VIVOSync {
         KarmaClient.setupKarmaMetadata();
 
         // Run the transforms and post changes to VIVO
-        VIVOSync syncer = new VIVOSync(cl);
+        Batch syncer = new Batch(cl);
         syncer.doTransforms();
     }
 
@@ -63,7 +65,7 @@ public class VIVOSync {
                 debug = debugConfig.getBoolean();
             }
             String modelName = soln.getLiteral("name").toString();
-            log.info(String.format("Processing: %s with debug set to %s", modelName, debug));
+            log.info(String.format("Processing: %s model with debug set to %s", modelName, debug));
             Literal sourceFile = soln.getLiteral("source");
             Literal kmodel = soln.getLiteral("model");
             String namedGraph = soln.getLiteral("namedGraph").toString();
@@ -73,21 +75,44 @@ public class VIVOSync {
             log.info("Reading Karma generated RDF into Jena model.");
             //Get Jena models for incoming RDF and existing RDF
             Model incoming = ModelUtils.getModelFromN3String(karmaRdf);
-            Model existing = vivoClient.getExistingNamedGraph(namedGraph);
 
-            //Diff the models
-            Model additions = incoming.difference(existing);
-            Model subtractions = existing.difference(incoming);
-            if (debug) {
-                log.info("Triples to add:\n");
-                additions.write(System.out, "N-TRIPLES");
-                log.info("Triples to delete:\n");
-                subtractions.write(System.out, "N-TRIPLES");
+            if ( sync ) {
+                log.info("Syncing triples to " + namedGraph);
+                //Diff the models
+                Model existing = vivoClient.getExistingNamedGraph(namedGraph);
+                Model additions = incoming.difference(existing);
+                Model subtractions = existing.difference(incoming);
+                if (debug) {
+                    debugTrips(additions, subtractions);
+                } else {
+                    vivoClient.syncNamedGraph(namedGraph, additions, subtractions);
+                    log.info("Triples synced for: " + modelName);
+                }
             } else {
-                vivoClient.syncNamedGraph(namedGraph, additions, subtractions);
-                log.info("Triples synced for: " + modelName);
+                log.info("Updating triples to " + namedGraph);
+                if (debug) {
+                    debugTrips(incoming);
+                } else {
+                    vivoClient.updateNamedGraph(namedGraph, incoming);
+                    log.info("Added triples to: " + modelName);
+                }
             }
         }
+    }
+
+    private void debugTrips(Model additions) {
+        Long numAdd = additions.size();
+        log.info(numAdd + " triples to add: " + numAdd);
+        additions.write(System.out, "N-TRIPLES");
+    }
+
+    private void debugTrips(Model additions, Model subtractions) {
+        Long numAdd = additions.size();
+        Long numSub = additions.size();
+        log.info(numAdd.toString() + " triples to add:\n");
+        additions.write(System.out, "N-TRIPLES");
+        log.info(numSub.toString() + " triples to delete:\n");
+        subtractions.write(System.out, "N-TRIPLES");
     }
 
     private ResultSet readConfig(String config) {
@@ -109,6 +134,10 @@ public class VIVOSync {
 
     protected void parseCommandLineOptions(CommandLine cl) {
         config = cl.getOptionValue("config");
+        if (cl.hasOption("sync")) {
+            log.info("Will sync triples to named graph");
+            sync = true;
+        }
         BASE_DIRECTORY = FilenameUtils.getFullPathNoEndSeparator(config) + File.separator;
     }
 
@@ -116,6 +145,7 @@ public class VIVOSync {
     private static Options createCommandLineOptions() {
         Options options = new Options();
         options.addOption(new Option("config", "config", true, "TTL config file with the Karma models and input files"));
+        options.addOption("sync", false, "Sync triples to a named graph");
         return options;
     }
 }
