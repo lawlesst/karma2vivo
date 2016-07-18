@@ -153,7 +153,7 @@ public class VIVOSPARQLClient {
             try {
                 String statusLine = response.getStatusLine().toString();
                 log.debug("HTTP response: " + statusLine);
-                if (!statusLine.contains("200 OK")) {
+                if (!statusLine.contains("200")) {
                     try {
                         throw new Exception("VIVO API failed");
                     } catch (Exception e) {
