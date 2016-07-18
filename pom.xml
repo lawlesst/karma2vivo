@@ -6,7 +6,7 @@
 
     <groupId>karma2vivo</groupId>
     <artifactId>karma2vivo</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
@@ -41,55 +41,6 @@
             <version>4.3.6</version>
         </dependency>
     </dependencies>
-
-    <profiles>
-        <profile>
-            <id>shaded</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <!-- Configuration for Generating a self contained executable jar for
-                        offline mode -->
-                    <!-- to generate the jar, run: mvn package -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-shade-plugin</artifactId>
-                        <version>2.3</version>
-                        <configuration>
-                            <shadedArtifactAttached>true</shadedArtifactAttached>
-                            <shadedClassifierName>shaded</shadedClassifierName>
-                            <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.github.lawlesst.karma2vivo.Batch</mainClass>
-                                </transformer>
-                            </transformers>
-                            <filters>
-                                <filter>
-                                    <artifact>*:*</artifact>
-                                    <excludes>
-                                        <exclude>META-INF/*.SF</exclude>
-                                        <exclude>META-INF/*.DSA</exclude>
-                                        <exclude>META-INF/*.RSA</exclude>
-                                    </excludes>
-                                </filter>
-                            </filters>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>shade</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 
 </project>
