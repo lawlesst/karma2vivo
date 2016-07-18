@@ -17,7 +17,8 @@
 
 * install [Karma](https://github.com/usc-isi-i2/Web-Karma/wiki/Installation%3A-Source-Code)
 
-* git clone this repository
+* `git clone git@github.com:lawlesst/karma2vivo.git`
+* `cd karma2vivo`
 
 * run `mvn clean install`
 
@@ -25,7 +26,7 @@
 
 * run `./batch.sh sample/ingest.ttl` to run a sample batch. If all goes well you should see triples printed to your screen.
 
-* createyour own `ingest.ttl` file based on the example in `sample/ingest.ttl`.
+* create your own `ingest.ttl` file based on the example in `sample/ingest.ttl`.
 
 
 ## Usage
