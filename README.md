@@ -13,7 +13,7 @@ Batch generation of RDF for VIVO using Karma models and the [VIVO SPARQL Update 
 
 ## Installation
 
-***This is first pass at installation instructions. This will probably require some troubleshooting and modifications to install.***
+*This is first pass at installation instructions. This will probably require some troubleshooting and modifications to install.*
 
 * install [Karma](https://github.com/usc-isi-i2/Web-Karma/wiki/Installation%3A-Source-Code)
 
