@@ -1,8 +1,6 @@
 ## karma2vivo
 
-Batch generation of RDF for VIVO using Karma models and the [VIVO SPARQL Update API](https://wiki.duraspace.org/display/VIVO/The+SPARQL+Update+API) to write the data to VIVO.
-
-*This is a work in progress.*
+Batch generation of RDF for VIVO using Karma models and the [VIVO SPARQL Update API](https://wiki.duraspace.org/display/VIVO/The+SPARQL+Update+API) to write the data to VIVO. *This is a work in progress.*
 
 ## Purpose/Goals
 
@@ -15,7 +13,7 @@ Batch generation of RDF for VIVO using Karma models and the [VIVO SPARQL Update 
 
 ## Installation
 
-`This is also a work in progress. This will require some fiddling on your end to get this right.`
+***This is first pass at installation instructions. This will probably require some troubleshooting and modifications to install.****
 
 * install [Karma](https://github.com/usc-isi-i2/Web-Karma/wiki/Installation%3A-Source-Code)
 
@@ -39,4 +37,4 @@ Batch generation of RDF for VIVO using Karma models and the [VIVO SPARQL Update 
 
 * by removing `ingest:debug "true"`, karma2vivo will connect to your VIVO store (using the environment variables defined in sample-batch.sh) and post the generated triples to VIOV.
 
-`More to come.`
+More to come...
