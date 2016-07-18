@@ -1,6 +1,8 @@
 ## karma2vivo
 
-`This is a work in progress.`
+Batch generation of RDF for VIVO using Karma models and the [VIVO SPARQL Update API](https://wiki.duraspace.org/display/VIVO/The+SPARQL+Update+API) to write the data to VIVO.
+
+*This is a work in progress.*
 
 ## Purpose/Goals
 
