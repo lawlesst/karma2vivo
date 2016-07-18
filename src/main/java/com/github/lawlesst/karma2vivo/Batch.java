@@ -13,6 +13,8 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,6 +37,7 @@ public class Batch {
 
     public static void main(String[] args) throws KarmaException, IOException {
 
+        PropertyConfigurator.configure("src/main/config/log4j.properties");
         log.info("Starting Karma2VIVO");
         Options options = createCommandLineOptions();
         CommandLine cl = CommandLineArgumentParser.parse(args, options, Batch.class.getSimpleName());
