@@ -15,7 +15,7 @@ This is a work in progress. Feel free to open if you have questions.
 
 * install [Karma](https://github.com/usc-isi-i2/Web-Karma/wiki/Installation%3A-Source-Code)
 * git clone the repository
-* run `mvn install`
+* run `mvn clean install`
 * copy `sample-batch.sh` to `batch.sh` (or your choice) and change default values to match your environment
 * run `batch.sh --config sample/ingest.ttl` to run a sample batch. If all goes well you should see triples printed to your screen.
 * sync real data by creating your own `ingest.ttl` file based on the example in `sample/ingest.ttl`. 
