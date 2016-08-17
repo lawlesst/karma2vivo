@@ -4,7 +4,7 @@
 
 [] a ingest:Transform ;
     ingest:name "people" ;
-    ingest:source "people.csv" ;
+    ingest:source "rm-people.csv" ;
     ingest:model "people-model.ttl" ;
     #ingest:debug "true" ;
     ingest:namedGraph "http://localhost/karma/people" .

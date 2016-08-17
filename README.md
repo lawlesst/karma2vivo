@@ -1,29 +1,40 @@
 ## karma2vivo
 
-This is a work in progress. Feel free to open if you have questions. 
+Batch generation of RDF for VIVO using Karma models and the [VIVO SPARQL Update API](https://wiki.duraspace.org/display/VIVO/The+SPARQL+Update+API) to write the data to VIVO. *This is a work in progress.*
 
 ## Purpose/Goals
 
- * Use [Karma](http://www.isi.edu/integration/karma/) to map legacy data in a variety of formats to RDF for VIVO
- * Export [Karma's models](https://github.com/usc-isi-i2/Web-Karma/wiki/Modeling-Data) and use with the 
- * Use VIVO's SPARQL update API to automate the mapping of the legacy data to RDF 
+* Use [Karma](http://www.isi.edu/integration/karma/) to map existing data in a variety of formats to RDF for VIVO.
+
+* Export [Karma's models](https://github.com/usc-isi-i2/Web-Karma/wiki/Modeling-Data) for use from outside the Karma interface. 
+
+* Use the [Karma RDF generator API](https://github.com/usc-isi-i2/Web-Karma/wiki/Batch-Mode-for-RDF-Generation#genericrdfgenerator) to generate triples and the VIVO SPARQL Update API to write those triples to VIVO in an automated fashion.
 
 
 ## Installation
 
-`This is also a work in progress. This will require some fiddling on your end to get this right.`
+*This is first pass at installation instructions. This will probably require some troubleshooting and modifications to install.*
 
 * install [Karma](https://github.com/usc-isi-i2/Web-Karma/wiki/Installation%3A-Source-Code)
-* git clone the repository
+
+* `git clone git@github.com:lawlesst/karma2vivo.git`
+* `cd karma2vivo`
+
 * run `mvn clean install`
+
 * copy `sample-batch.sh` to `batch.sh` (or your choice) and change default values to match your environment
-* run `batch.sh --config sample/ingest.ttl` to run a sample batch. If all goes well you should see triples printed to your screen.
-* sync real data by creating your own `ingest.ttl` file based on the example in `sample/ingest.ttl`. 
- * by removing `ingest:debug "true"`, karma2vivo will connect to your VIVO store (using the environment variables defined in sample-batch.sh) and sync the triples to a named graph.
+
+* run `./batch.sh sample/ingest.ttl` to run a sample batch. If all goes well you should see triples printed to your screen.
+
+* create your own `ingest.ttl` file based on the example in `sample/ingest.ttl`.
+
 
 ## Usage
 
 * An "ingest" configuration is needed. See the sample in `sample/ingest.ttl`. There can be multiple ingest:Transform blocks in one configuration.
-* There is a command line option `--sync` that can be both powerful and dangerous. When set it will not just add triples to VIVO but it will query VIVO for
-existing triples in a named graph and compare those with the incoming triples. It will then delete and/or add triples to make sure that the named graph matches
-what is coming from the source data.
+
+* There is a command line option `--sync` that will compare triples in the incoming data to those that exist in VIVO and update VIVO to match the incoming data. Warning, this will remove data.
+
+* by removing `ingest:debug "true"`, karma2vivo will connect to your VIVO store (using the environment variables defined in sample-batch.sh) and post the generated triples to VIOV.
+
+More to come...
