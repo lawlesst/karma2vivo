@@ -102,15 +102,15 @@ public class Batch {
         }
     }
 
-    private void debugTrips(Model additions) {
-        Long numAdd = additions.size();
+    private void debugTrips(Model model) {
+        Long numAdd = model.size();
         log.info(numAdd + " triples to add: " + numAdd);
-        additions.write(System.out, "N-TRIPLES");
+        model.write(System.out, "N-TRIPLES");
     }
 
     private void debugTrips(Model additions, Model subtractions) {
         Long numAdd = additions.size();
-        Long numSub = additions.size();
+        Long numSub = subtractions.size();
         log.info(numAdd.toString() + " triples to add:\n");
         additions.write(System.out, "N-TRIPLES");
         log.info(numSub.toString() + " triples to delete:\n");
